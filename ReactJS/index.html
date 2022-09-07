@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">   
+        const root = document.getElementById("root");
+        function App() { 
+            const [counter, setCounter] = React.useState(0); 
+            const onClick = () => {
+                setCounter((current) => current + 1);
+            }
+            return(
+                <div>
+                    <h3>Total clicks : {counter}</h3>
+                    <button onClick={onClick}>Click me!</button>
+                </div>
+            );
+        }
+        ReactDOM.render(<App />, root);
+
+        //-----
+        
+        // const root = document.getElementById("root");
+        // let counter = 0;
+        // function countUp() {
+        //     counter = counter + 1   
+        //     render();
+        // }
+        // function render() {
+        //     ReactDOM.render(<Container />, root); 
+        // }
+        // const Container = () => (
+        //     <div>
+        //         <h3>Total clicks : {counter}</h3>
+        //         <button onClick={countUp}>Click me!</button>
+        //     </div>
+        // );
+        // ReactDOM.render(<Container />, root);
+
+        //-----
+
+        // const root = document.getElementById("root");
+        // const Title = (
+        //     <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        //     Hello I'm a title
+        //     </h3>
+        // );
+        // const Button = (
+        //     <button 
+        //         style={{backgrounColor: "tomato",
+        //     }}
+        //     onClick = {() => console.log("im clicked")}
+        //     >
+        //         Click me
+        //     </button>
+        // );
+        // const Container = (
+        //     <div>
+        //         <Title />
+        //         <Button />
+        //     </div>
+        // );
+        // ReactDOM.render(container, root);
+        
+        //-----
+
+        // const root = document.getElementById("root");
+        // const h3 = React.createElement(
+        //     "h3", 
+        //     {
+        //         onMoustEnter: () => console.log("mouse enter")
+        //     }, 
+        //     "hello"
+        // );
+        // const btn = React.createElement(
+        //     "button", 
+        //     {
+        //         onClick: () => console.log("im clicked")
+        //     }, 
+        //     "Click me"
+        // );
+        // const container = React.createElement("div", null, [h3, btn]);
+        // ReactDOM.render(container, root);
+    </script>
+</html>
